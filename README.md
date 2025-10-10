@@ -19,11 +19,11 @@ Replacing [Figma](https://www.figma.com/) as a main design tool with an agentic 
 
 Design is iterative, non-linear, and context-dependant, but there is still a sequence that underpins the general flow. Each task is mapped to the most relevant step in this process.
 
-**Define – Plan – Gather – Process – Explore – Focus – Construct – Refine – Reflect**
+**Define – Plan – Gather – Process – Explore – Focus – Build – Refine – Reflect**
 
 For example, when preparing for user interviews, a designer might run a `/sketch-interview-protocol` command to help them create/edit an interview protocol. That command uses existing study plan under `.../discovery/research/plan` folder and/or related interview debriefs in `/process/` to generate a `user-interview-protocol.md` draft in `/execution/`.
 
-Also, there are pick-and-choose commands (e.g. `/plan-exploration-and-sensemaking`) to take an output of the step and suggest the contents of the next step as not all of the available tasks are relevant in each situation. 
+Also, there are pick-and-choose commands (e.g. `/plan-exploration-and-sensemaking`) that take the output of one step and suggest the content for the next, since not all available tasks are relevant in every situation.
 
 ## Example
 

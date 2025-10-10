@@ -1,5 +1,5 @@
-input: processed research data
-output: s
+input: processed research data.
+output:
 
 Planning the organising, pruning, and filtering data in the context of a design problem, in an effort to produce information and knowledge. 
 
