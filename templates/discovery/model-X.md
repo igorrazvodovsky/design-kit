@@ -1,0 +1,1 @@
+E.g. concept maps, jobs, personas, affinity map, etc.

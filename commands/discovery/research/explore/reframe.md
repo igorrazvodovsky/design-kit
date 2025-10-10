@@ -1,0 +1,1 @@
+Reframing is a method of shifting semantic perspective in order to see things in a new way. The new frame "re-embeds" a product, system, or service in a new (and not necessarily logical) context, allowing the designer to explore associations and hidden links to and from the center of focus.

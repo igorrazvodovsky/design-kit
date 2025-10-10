@@ -1,0 +1,1 @@
+Generally, a concept map links elements to one another. _Specifically_, a concept map will form connections between entities (nouns) by describing relationships (verbs). The map provides a visual way to understand relationships through literal connections as well as through proximity, size, shape, and scale. As an artefact, the map is intended to illustrate relationships.

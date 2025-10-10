@@ -1,0 +1,1 @@
+Desired system shifts; guardrails (safety/compliance); stewardship metrics; who’s accountable for each.

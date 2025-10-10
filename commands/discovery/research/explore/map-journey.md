@@ -1,0 +1,2 @@
+Identify core journeys and understand their phases. Identify actions, behaviours, emotions, touchpoints and other relevant layers throughout each phase. Visualise them to create a shared understanding and alignment. Build the map collaboratively with the team members who will operate on it, and use subsequent interviews or research efforts as an opportunity to test validity. Provoke new options for design by building a "future state" journey map and identifying the key gaps between now and a more preferable future.
+

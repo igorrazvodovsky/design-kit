@@ -1,0 +1,3 @@
+Insight combination is a method of building on these established design patterns in order to create initial design ideas. Through multiple steps, this method first demands the articulation of individual design insights, and then forces a structured and formal pairing of insights with existing patterns. This pairing creates a new design idea that has a strong connection to both established best practices and to problem-specific research data.
+
+During synthesis, a designer can utilise the insight combination method as described above to directly apply personal experience in a manner that is tempered by design tendencies, and to actively produce new design implications and constraints.
