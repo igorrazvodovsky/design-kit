@@ -25,6 +25,20 @@ For example, when preparing for user interviews, a designer might run a `/sketch
 
 Also, there are pick-and-choose commands (e.g. `/plan-exploration-and-sensemaking`) that take the output of one step and suggest the content for the next, since not all available tasks are relevant in every situation.
 
+## "Integration" with other tools
+
+### Figma
+
+...
+
+### User-research platform (e.g. Dovetail)
+
+...
+
+### Analytics
+
+...
+
 ## Example
 
 ...

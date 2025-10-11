@@ -1,0 +1,33 @@
+properties:
+  note.I need:
+    displayName: I need to
+  file.fullname:
+    displayName: file
+views:
+  - type: table
+    name: Table
+    filters:
+      and:
+        - file.inFolder("example-1/outputs/needs")
+    order:
+      - ID
+      - user type
+      - as a
+      - who is
+      - I need
+      - so that
+      - category
+      - theme
+      - user journey stage
+      - customer journey stage
+      - acceptance criteria
+      - file.name
+    sort:
+      - property: ID
+        direction: ASC
+    columnSize:
+      note.user type: 112
+      note.as a: 91
+      note.who is: 231
+      note.I need: 251
+      note.so that: 213
