@@ -1,7 +1,7 @@
 ---
 ID: "8"
 user type: "[[user]]"
-as a: teammate
+as a: team member
 who is: invited by an admin
 I need to: accept an invite and land in the correct workspace
 so that: I see the right data and teammates

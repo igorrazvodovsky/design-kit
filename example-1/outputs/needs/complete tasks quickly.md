@@ -4,7 +4,7 @@ user type: "[[user]]"
 as a: "[[user]]"
 who is: trying to be productive
 I need to: complete tasks quickly
-so that: I can accomplish more in less time
+so that: I can work more efficiently
 category: performance
 theme: efficiency
 user journey stage:

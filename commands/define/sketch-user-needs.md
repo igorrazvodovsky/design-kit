@@ -15,7 +15,7 @@ Extract and document user needs from research insights or existing documentation
 Use **Read** tool to review source material. Look for expressions of what users need to accomplish:
 
 - Listen for goals, not solutions ("I need to see my tasks" not "I want a dashboard")
-- Distinguish needs (fundamental requirements) from wants (desired features)
+- Distinguish needs from wants
 - Look for the "why" behind stated requests
 - Identify the outcome users are trying to achieve
 
@@ -23,36 +23,160 @@ Use **Read** tool to review source material. Look for expressions of what users 
 
 For each identified need, use the **Write** tool to create a new `.md` file in `example-1/outputs/needs/`:
 
-**Template structure:**
+**Template structure from `templates/user-need.md`:**
 ```yaml
 ---
-ID: [sequential number - check existing with Glob to find next ID]
-user type: "[[user-type]]"
-as a: [specific role]
-who is: [optional qualifier]
-I need to: [action or capability]
-so that: [ultimate goal/outcome]
-category:
-theme:
-user journey stage: "[[stage]]"
-customer journey stage:
-acceptance criteria:
+ID: [ID]
+user type: [high-level types of user]
+as a: [specific user type]
+who is: [cross-cutting attribute that matters]
+I need to: [the need; not a want or solution]
+so that: [the goal/outcome the need enables]
+category: [(optional) practical bucket a need belongs to]
+theme: [(optional) conceptual thread, e.g. findability]
+user journey stage: [user journey stage]
+customer journey stage: [(optional) customer journey stage]
 ---
 ```
 
-**Key principles:**
+**Field-by-field guide:**
 
-- **Filename = "I need to" field** — Use exact text with spaces, lowercase
-- **Focus on needs, not wants** — "search for items" not "have a search box"
-- **Separate action from outcome** — "I need to" describes action, "so that" describes why
-- **Use wiki-links** — Link to `[[user-type]]` and `[[journey-stage]]` for relationships
-- **Be specific** — Vague needs are hard to validate or design for
+**ID:**
+- Sequential number starting from 1
+- Use **Glob** to count existing: `pattern="example-1/outputs/needs/*.md"`
+- Format as string: `"23"`
+
+**user type:**
+- High-level user category (for grouping)
+- Use wiki-link format: `"[[user]]"`, `"[[admin]]"`, `"[[team-member]]"`
+- Check existing types with **Grep**: `pattern="user type:" output_mode="content"`
+- Be consistent - reuse existing types when possible
+
+**as a:**
+- Specific role or job description (plain text)
+- Examples: `teammate`, `project contributor`, `frequent user`, `admin`
+- More specific than user type
+- Keep limited to 5-10 distinct roles
+
+**who is:**
+- Optional cross-cutting qualifier (plain text)
+- Use when context matters: `invited by an admin`, `managing multiple workspaces`, `with accessibility needs`
+- Leave blank if not needed
+- Enables finding all needs across types with same qualifier
+
+**I need to:**
+- The action or capability (plain text)
+- **This becomes the filename** - use exact text, lowercase, with spaces
+- Focus on capability, NOT solution
+- Examples:
+  - ✓ `search for relevant items`
+  - ✗ `have a search box with filters`
+- Be specific and action-oriented
+- Avoid implementation details
+
+**so that:**
+- The ultimate goal or benefit (plain text)
+- Must be DIFFERENT level than "I need to"
+- Examples:
+  - ✓ Need: `save my work` / Outcome: `I don't lose progress if interrupted`
+  - ✗ Need: `save my work` / Outcome: `my work is saved` (circular)
+- Focus on user's goal, not system behavior
+- Examples:
+  - ✓ `I can meet project deadlines`
+  - ✗ `the system stores my data`
+
+**category:**
+- Optional during initial extraction
+- Will be filled during refinement
+- High-level grouping: `navigation`, `access`, `collaboration`
+- Leave blank initially
+
+**theme:**
+- Optional during initial extraction
+- Conceptual thread: `findability`, `efficiency`, `security`
+- Leave blank initially
+
+**user journey stage:**
+- Where in journey this need occurs
+- Use wiki-link: `"[[registration]]"`, `"[[daily-use]]"`, `"[[offboarding]]"`
+- Check existing stages with **Grep**: `pattern="user journey stage:" output_mode="content"`
+
+**customer journey stage:**
+- Optional alternative perspective
+- Leave blank if not tracking separately
 
 **Process:**
-1. Use **Glob** to find existing needs: `Glob: pattern="example-1/outputs/needs/*.md"`
+1. Use **Glob** to find existing needs: `pattern="example-1/outputs/needs/*.md"`
 2. Count files to determine next ID
-3. Use **Write** to create new file with frontmatter
-4. Place in `example-1/outputs/needs/[need description].md`
+3. Use **Grep** to check for existing user types and journey stages
+4. Use **Write** to create file: `file_path="example-1/outputs/needs/[I need to text].md"`
+
+**Common need patterns with templates:**
+
+**Discovery/Learning:**
+```yaml
+---
+ID: "[next]"
+user type: "[[user]]"
+as a: [role]
+who is: unfamiliar with the system
+I need to: understand what I can accomplish
+so that: I can determine if this meets my needs
+user journey stage: "[[discovery]]"
+---
+```
+
+**Access/Permission:**
+```yaml
+---
+ID: "[next]"
+user type: "[[user]]"
+as a: [role]
+who is: authorized to access
+I need to: prove my identity securely
+so that: I can access protected features
+user journey stage: "[[registration]]"
+---
+```
+
+**Task Completion:**
+```yaml
+---
+ID: "[next]"
+user type: "[[user]]"
+as a: [role]
+who is:
+I need to: [perform specific action]
+so that: I can accomplish [specific goal]
+user journey stage: "[[daily-use]]"
+---
+```
+
+**Efficiency:**
+```yaml
+---
+ID: "[next]"
+user type: "[[user]]"
+as a: frequent user
+who is:
+I need to: [do something] quickly
+so that: I can complete work efficiently
+user journey stage: "[[daily-use]]"
+---
+```
+
+**Collaboration:**
+```yaml
+---
+ID: "[next]"
+user type: "[[team-member]]"
+as a: [role]
+who is: working with others
+I need to: [share/coordinate/communicate]
+so that: my team can work together effectively
+user journey stage: "[[collaboration]]"
+---
+```
 
 ### 3. Validate Need Quality
 

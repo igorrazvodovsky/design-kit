@@ -4,7 +4,7 @@ user type: "[[user]]"
 as a: "[[user]]"
 who is: updating many similar items
 I need to: apply changes to multiple items
-so that: I don't repeat the same action dozens of times
+so that: I can work efficiently at scale
 category: bulk operations
 theme: batch editing
 user journey stage:

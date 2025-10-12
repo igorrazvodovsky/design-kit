@@ -5,237 +5,426 @@ Organize, categorize, and analyze user needs to uncover patterns, duplicates, an
 ## Input
 
 - Collection of user need `.md` files
-- [[user-need]] template (for standardization)
+- User need template at `templates/user-need.md` for standardization
 
 ## Instructions
 
 ### Phase 1: Standardize Structure
 
-Review all existing needs for consistency:
-
 1. **Check format compliance**
-   - All files use the [[user-need]] template?
-   - Filenames match "I need to" field?
-   - Required fields are populated?
-   - Wiki-links used for user types and journey stages?
+   For each file:
+   - Check frontmatter structure matches template
+   - Verify required fields are populated
+   - Verify filename matches "I need to" field
 
 2. **Refine "as a" / "who is" split**
    - Move qualifiers from "as a" to "who is" field
    - Example: "admin managing multiple workspaces" → as a: admin / who is: managing multiple workspaces
-   - Standardize user type vocabulary
 
 3. **Verify needs vs wants**
-   - Ensure "I need to" focuses on capabilities, not solutions
-   - Rewrite any solution specifications as capability needs
-   - Example: "have a dashboard" → "view summary of my tasks"
-
-4. **Check outcomes**
-   - "So that" should be the ultimate goal, not just restating the need
-   - Ensure action and outcome are at different levels
-   - Example: Fix "I need to save work / so that work is saved" → "so that I don't lose progress"
+   - Look for solution-oriented language
+   - Rewrite as capability needs
 
 ### Phase 2: Tag and Categorize
 
-Add metadata to enable analysis:
-
 1. **Assign categories (epics)**
-   - Group related needs into 8-12 high-level categories
-   - Examples: "Access & Permissions", "Navigation", "Collaboration", "Content Creation"
-   - Update `category:` field in each need's frontmatter
+   - Group needs by similar topics (use Grep to find patterns)
+   - Identify 8-12 high-level categories
+   - Add `category:` field to each need
 
 2. **Identify themes**
-   - Look for conceptual threads across categories
-   - Examples: findability, security, efficiency, autonomy
-   - Update `theme:` field
+   - Find conceptual patterns:
+     ```
+     Grep: pattern="so that:.*quick|fast|efficient" path="example-1/outputs/needs" output_mode="files_with_matches"
+     ```
+   - Add `theme:` field where appropriate
 
 3. **Verify journey stage mappings**
-   - Ensure all needs link to appropriate `[[journey-stage]]`
-   - Create stage notes if missing
+   - Check for journey stage notes
+   - Ensure all needs have `user journey stage:` field
+   - Add missing stage links
 
-4. **Note cross-cutting attributes**
-   - Use "who is" field for common qualifiers
-   - Examples: "with accessibility needs", "first-time user", "managing multiple workspaces"
+### Phase 3: Analyze with Grep
 
-### Phase 3: Analyze in Obsidian Bases
+**1. Group by Journey Stage**
+```
+Grep: pattern='user journey stage: "\[\[registration\]\]"' path="example-1/outputs/needs" output_mode="count"
+```
+Repeat for each stage to see distribution.
 
-Use Bases to uncover insights:
+**2. Group by User Type**
+```
+Grep: pattern='user type: "\[\[user\]\]"' path="example-1/outputs/needs" output_mode="count"
+```
+Compare counts across user types.
 
-1. **Set up analysis views**
+**3. Find Similar Outcomes**
+```
+Grep: pattern="so that:.*share.*" path="example-1/outputs/needs" output_mode="content" -n
+```
+Identify needs with similar goals.
 
-   **View: By Journey Stage**
-   - Group by: `user journey stage`
-   - Purpose: See distribution across user journey
-   - Question: Are some stages under-represented?
+**4. Find Needs by Category**
+```
+Grep: pattern="category: access" path="example-1/outputs/needs" output_mode="files_with_matches"
+```
+Count needs per category.
 
-   **View: By User Type**
-   - Filter by: `user type`
-   - Purpose: Understand each user segment
-   - Question: Have we captured all user types?
+**5. Find Unprocessed Needs**
+```
+Grep: pattern="^category:$" path="example-1/outputs/needs" output_mode="files_with_matches"
+```
+Identify needs missing categorization.
 
-   **View: By Outcome**
-   - Sort by: `so that` field
-   - Purpose: Find needs with similar outcomes
-   - Question: Are there duplicates or related needs?
-
-   **View: By Category**
-   - Group by: `category`
-   - Purpose: See how needs cluster
-   - Question: Are categories balanced or is something missing?
-
-   **View: Unprocessed**
-   - Filter: `category` is empty
-   - Purpose: Track refinement progress
-   - Question: Which needs still need categorization?
-
-2. **Look for patterns**
-   - **Duplicates:** Same outcome with different wording
-   - **Related needs:** Different actions toward same outcome
-   - **Gaps:** User types or stages with few/no needs
-   - **Singletons:** Categories with only one need (may need research)
-   - **Common outcomes:** Recurring "so that" statements
-
-3. **Count and assess**
-   - How many needs per journey stage?
-   - How many needs per user type?
-   - How many needs per category?
-   - What's the ratio of categories to total needs? (Aim for 8-12 categories per 60-80 needs)
+**6. Identify Duplicates**
+```
+Grep: pattern="I need to: find|search|locate" path="example-1/outputs/needs" output_mode="content" -n
+```
+Look for variations expressing same need.
 
 ### Phase 4: Address Findings
 
-Based on analysis, take action:
-
 1. **Merge duplicates**
-   - Combine needs with identical outcomes
-   - Keep the clearest wording
-   - Archive the redundant file or note both source projects
+   - Compare duplicate needs
+   - Update one with best wording
+   - Document both source IDs in comments
+   - Move redundant file to archive: `mv old.md archived/`
 
 2. **Split overly broad needs**
-   - If one need has multiple distinct outcomes, separate them
-   - Create individual files for each specific need
+   - Identify needs with multiple outcomes
+   - Create separate files for each specific need
+   - Update original or archive it
 
-3. **Research gaps**
-   - Note journey stages or user types with sparse coverage
-   - Plan targeted research to fill gaps
-   - Create "research questions" note
+3. **Document gaps**
+   - Create `example-1/outputs/research-questions.md`
+   - List journey stages or user types needing research
 
 4. **Standardize outcomes**
-   - When many needs share outcomes, standardize wording
-   - Makes filtering and grouping more effective
-   - Example: "share with others" vs "make accessible to team" → choose one
+   - Find similar outcomes (Grep patterns)
+   - Standardize wording across related needs
+   - Example: "share with others" / "make accessible to team" → choose one consistently
 
 5. **Validate singleton categories**
-   - Categories with only 1-2 needs may need more research
-   - Or may not warrant their own category (recategorize)
+   - Count needs per category
+   - For categories with 1-2 needs: research more or recategorize
+   - Update category field as needed
+
+### Phase 5: Create Analysis Report
+
+Document findings in `example-1/outputs/needs-analysis.md`:
+
+```markdown
+# User Needs Analysis
+
+## Summary Statistics
+
+- Total needs: [count from Glob]
+- User types: [count unique from Grep]
+- Journey stages: [count unique from Grep]
+- Categories: [list with counts]
+
+## Distribution Analysis
+
+### By Journey Stage
+- Registration: X needs
+- Onboarding: Y needs
+- Daily use: Z needs
+[etc.]
+
+### By User Type
+- User: X needs
+- Admin: Y needs
+[etc.]
+
+## Patterns Identified
+
+### Common Outcomes
+[List frequent "so that" statements]
+
+### Duplicates Merged
+[List which needs were combined]
+
+### Gaps Identified
+[List under-represented areas]
+
+## Recommendations
+
+- Research needed for: [stages/types with few needs]
+- Categories to split: [overly broad categories]
+- Categories to merge: [singleton categories]
+```
 
 ## Output
 
 - Standardized need files with complete frontmatter
-- Categories and themes assigned
-- Obsidian Bases views configured for ongoing analysis
-- List of insights:
-  - Duplicates merged
-  - Gaps identified
-  - Patterns noted
-  - Research questions for follow-up
+- Categories and themes assigned across all needs
+- Analysis report: `example-1/outputs/needs-analysis.md`
+- Research questions document: `example-1/outputs/research-questions.md`
+- Archived duplicates: `example-1/outputs/needs/archived/`
+
+## Tool Usage Examples
+
+### Find all needs for a journey stage
+```
+Grep: pattern='user journey stage: "\[\[registration\]\]"' path="example-1/outputs/needs" output_mode="files_with_matches"
+```
+
+### Count needs per category
+```
+Grep: pattern="category: navigation" path="example-1/outputs/needs" output_mode="count"
+```
+
+### Find needs without categories
+```
+Grep: pattern="^category:$|^category:\s*$" path="example-1/outputs/needs" output_mode="files_with_matches"
+```
+
+### Find potential duplicates
+```
+Grep: pattern="I need to:.*save|store|persist" path="example-1/outputs/needs" output_mode="content" -n
+```
+
+### Update category for a need
+```
+Edit:
+  file_path="example-1/outputs/needs/see my assigned work.md"
+  old_string="category:"
+  new_string="category: navigation"
+```
+
+### Create analysis report
+```
+Write:
+  file_path="example-1/outputs/needs-analysis.md"
+  content="# User Needs Analysis\n\n..."
+```
 
 ## Analysis Questions
 
-Use these to guide your review:
+Use **Grep** to answer:
 
 **Coverage:**
 - Do we have needs for all key user types?
+  ```
+  Grep: pattern="user type:" path="example-1/outputs/needs" output_mode="content" | unique count
+  ```
+
 - Are all journey stages represented?
-- Are there obvious missing scenarios?
+  ```
+  Grep: pattern="user journey stage:" path="example-1/outputs/needs" output_mode="content" | unique count
+  ```
 
 **Quality:**
-- Are needs clearly articulated?
-- Can we validate each with users?
-- Are outcomes specific and meaningful?
+- How many needs lack categories?
+  ```
+  Grep: pattern="^category:$" path="example-1/outputs/needs" output_mode="count"
+  ```
 
 **Patterns:**
 - Which outcomes appear most frequently?
-- Which journey stages have most needs?
-- Which user types have most/least needs?
+  ```
+  Grep: pattern="so that:" path="example-1/outputs/needs" output_mode="content"
+  ```
+  Parse and count frequency.
 
 **Balance:**
-- Are categories roughly balanced or heavily skewed?
-- Are some stages over/under-represented compared to their importance?
-- Do singleton categories represent genuine distinct areas?
-
-## Success Indicators
-
-You've successfully refined when:
-
-- ✓ All needs follow consistent format
-- ✓ Duplicates are merged
-- ✓ Categories assigned (8-12 categories for your set)
-- ✓ Bases views enable easy filtering and analysis
-- ✓ Gaps and patterns are documented
-- ✓ Team can quickly find relevant needs
-- ✓ Stakeholders understand scope via category summaries
+- Which journey stage has most needs?
+  Compare counts from stage-by-stage Grep queries.
 
 ## Common Refinement Scenarios
 
 ### Scenario: Duplicate with Different Wording
 
-**Need A:** `find relevant information quickly.md`
-- I need to: find relevant information quickly
-- so that: I can complete my tasks efficiently
-
-**Need B:** `search for what I'm looking for.md`
-- I need to: search for what I'm looking for
-- so that: I don't waste time hunting
-
-**Action:** These serve the same outcome (efficiency). Merge into one need:
-- I need to: find what I'm looking for quickly
-- so that: I can complete tasks without wasting time
-- Archive one file, note both sources
+**Process:**
+1. Find similar needs: `Grep: pattern="I need to:.*find|search" output_mode="content"`
+2. Compare full needs
+3. If same outcome, update one need with best wording
+4. Archive duplicate: `mv duplicate.md archived/`
 
 ### Scenario: Vague Outcome
 
-**Original:**
-- I need to: manage team permissions
-- so that: permissions are managed
+**Process:**
+1. Find circular outcomes: `Grep: pattern="so that:.*manage" output_mode="content"`
+2. Review each flagged need
+3. Replace with specific outcome
 
-**Problem:** Circular — outcome just restates the need
-
-**Refined:**
-- I need to: manage team permissions
-- so that: sensitive data is only accessible to authorized members
+**Example:**
+```
+Edit:
+  file_path="example-1/outputs/needs/manage team permissions.md"
+  old_string="so that: permissions are managed"
+  new_string="so that: sensitive data is only accessible to authorized members"
+```
 
 ### Scenario: Gap Identified
 
-**Observation:** 15 needs for "registration" stage, only 2 for "offboarding"
+**Process:**
+1. Count needs per stage (Grep)
+2. Identify stages with few needs
+3. Document gap:
 
-**Actions:**
-- Create note: "Research Question: Offboarding Experience"
-- Plan research focused on account closure and data export scenarios
-- May be appropriate gap (simpler flow) or missing needs
+```
+Write:
+  file_path="example-1/outputs/research-questions.md"
+  content="# Research Questions\n\n## Offboarding Experience\n\nOnly 2 needs identified for offboarding stage vs 15 for registration.\n\nInvestigate:\n- Account closure process\n- Data export needs\n- Transition planning\n"
+```
 
 ### Scenario: Outcome Proliferation
 
-**Finding:** 30 needs with 28 different "so that" statements
+**Situation:** 50 needs with 40 different "so that" outcomes
 
 **Problem:** Too much variation prevents useful grouping
 
-**Action:** Review outcomes for similarity and standardize:
-- "I can share with colleagues", "Others can see my work", "Team has access"
-- All become: "I can collaborate with my team"
+**Process:**
+1. Extract all outcomes: `Grep: pattern="so that:" output_mode="content"`
+2. Identify similar goals with different wording
+3. Decide on standard wording for each outcome category
+4. Standardize across files
 
-## Ongoing Maintenance
+**Example:**
+Outcomes to merge: "I can easily share research" / "Others can see my research" / "Research is accessible to the team"
 
-Refinement isn't one-time:
+Standard: "I can share research with others"
 
-- **Project start:** Review relevant needs, note gaps
-- **Project end:** Add new needs, merge duplicates, update categories
-- **Quarterly:** Full review of consistency and patterns
-- **As needed:** When needs grow significantly or new user types emerge
+```
+Edit:
+  file_path="example-1/outputs/needs/make research visible.md"
+  old_string="so that: Others can see my research"
+  new_string="so that: I can share research with others"
+
+Edit:
+  file_path="example-1/outputs/needs/publish findings.md"
+  old_string="so that: Research is accessible to the team"
+  new_string="so that: I can share research with others"
+```
+
+### Scenario: Multiple Outcomes
+
+**Situation:** One need has multiple distinct outcomes bundled together
+
+**Original need:**
+```yaml
+I need to: export data
+so that: I can analyze it in other tools and share it with external stakeholders
+```
+
+**Problem:** Two different outcomes in one need
+
+**Process:**
+1. Identify needs with "and" in outcome field
+2. Determine if outcomes are truly distinct
+3. Create separate needs for each outcome
+4. Archive or update original
+
+**Tool sequence:**
+```
+Grep: pattern="so that:.*and.*" path="example-1/outputs/needs" output_mode="files_with_matches"
+
+Read: file_path="example-1/outputs/needs/export data.md"
+
+Write:
+  file_path="example-1/outputs/needs/export data for analysis.md"
+  content="---\nID: \"45\"\n...I need to: export data\nso that: I can analyze it in specialized tools\n---"
+
+Write:
+  file_path="example-1/outputs/needs/export data for sharing.md"
+  content="---\nID: \"46\"\n...I need to: export data\nso that: I can share findings with external stakeholders\n---"
+
+Bash: command="mv 'example-1/outputs/needs/export data.md' 'example-1/outputs/needs/archived/'"
+```
+
+### Scenario: Singleton Category
+
+**Situation:** Category has only 1-2 needs
+
+**Detection:**
+```
+Grep: pattern="category: offboarding" path="example-1/outputs/needs" output_mode="count"
+```
+
+**Possible actions:**
+
+**If under-researched:**
+```
+Write:
+  file_path="example-1/outputs/research-questions.md"
+  content="## Category: Offboarding\n\nOnly 1 need found. Research questions:\n- What happens when users leave?\n- Data export needs?\n- Account cleanup?\n"
+```
+
+**If should recategorize:**
+```
+Edit:
+  file_path="example-1/outputs/needs/close account cleanly.md"
+  old_string="category: offboarding"
+  new_string="category: account management"
+```
+
+**If genuinely distinct:**
+Keep as-is, document rationale in analysis report
+
+### Scenario: Need vs Want (Solution Specification)
+
+**Detection:**
+```
+Grep: pattern="I need to:.*button|dashboard|interface|screen|page" path="example-1/outputs/needs" output_mode="content" -n
+```
+
+**Example found:**
+```
+I need to: have a dashboard showing all my tasks
+so that: I can see what to work on
+```
+
+**Problem:** Prescribes solution ("dashboard") instead of capability
+
+**Process:**
+```
+Read: file_path="example-1/outputs/needs/have a dashboard showing all my tasks.md"
+
+Edit:
+  file_path="example-1/outputs/needs/have a dashboard showing all my tasks.md"
+  old_string="I need to: have a dashboard showing all my tasks"
+  new_string="I need to: see all my assigned tasks at a glance"
+
+# Also update filename
+Bash: command="mv 'example-1/outputs/needs/have a dashboard showing all my tasks.md' 'example-1/outputs/needs/see all my assigned tasks at a glance.md'"
+```
+
+### Scenario: as a / who is Split
+
+**Detection:**
+```
+Grep: pattern="as a:.*managing|with|who" path="example-1/outputs/needs" output_mode="content" -n
+```
+
+**Example found:**
+```yaml
+as a: admin managing multiple workspaces
+who is:
+```
+
+**Problem:** Qualifier in "as a" field should be in "who is"
+
+**Process:**
+```
+Edit:
+  file_path="example-1/outputs/needs/[need].md"
+  old_string="as a: admin managing multiple workspaces\nwho is:"
+  new_string="as a: admin\nwho is: managing multiple workspaces"
+```
+
+## Success Indicators
+
+- ✓ All needs have complete frontmatter (no empty required fields)
+- ✓ Duplicates merged (verified via similarity searches)
+- ✓ Categories assigned (no empty category fields)
+- ✓ Analysis report created
+- ✓ Gaps documented (research questions file exists)
 
 ## Related Commands
 
 - [[sketch-user-needs]] — Initial extraction of needs from research
 - [[map-journey]] — Identify stages for journey stage mapping
-- [[plan-exploration-and-sensemaking]] — Plan research to address gaps
 
 ## References
 
