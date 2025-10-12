@@ -46,10 +46,6 @@ Early experiments applying the structure to scenarios. These are tests, not refe
 This repository uses Obsidian for knowledge management. Files contain wiki-links like `[[user]]` that reference other documents.
 
 - **Link mappings** are defined in [.claude/link-mappings.json](.claude/link-mappings.json)
-- Common entity types include:
-  - User types (user, admin)
-  - User journey stages (registration, access, onboarding, setup)
-  - Needs categories (navigation)
 - When encountering `[[entity-name]]`, resolve it using the mappings file
 - Obsidian uses "shortest path" resolution by default, so `[[user]]` finds `example-1/outputs/user types/user.md`
 - Update the mappings file when adding new entity types to maintain alignment between Obsidian and Claude Code

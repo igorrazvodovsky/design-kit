@@ -1,0 +1,12 @@
+---
+ID: "102"
+user type: "[[user]]"
+as a: prospective user
+who is: evaluating the system
+I need to: understand what this system offers before signing up
+so that: I can decide if it meets my needs
+category: access
+theme: informed decision-making
+user journey stage: "[[pre-registration]]"
+customer journey stage: consideration
+---
