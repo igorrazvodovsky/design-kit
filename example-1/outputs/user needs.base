@@ -24,6 +24,8 @@ views:
       - acceptance criteria
       - file.name
     sort:
+      - property: category
+        direction: ASC
       - property: ID
         direction: ASC
     columnSize:
@@ -31,5 +33,6 @@ views:
       note.as a: 115
       note.who is: 231
       note.I need to: 326
-      note.so that: 213
+      note.so that: 350
+      note.category: 212
       note.theme: 165

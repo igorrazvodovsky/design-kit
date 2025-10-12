@@ -2,6 +2,15 @@
 
 Practical guidance for managing user needs as a living practice, including team collaboration, timing, and common scenarios.
 
+## Your Setup
+
+This guide is adapted for use with:
+- **Format:** Individual .md files per user need in `example-1/outputs/needs/`
+- **Tool:** Obsidian with **Bases** plugin for database-like management
+- **Version control:** Your needs folder can be tracked with Git
+- **Template:** `templates/user-need.md` for consistent structure
+- **Analysis:** Obsidian Bases views (primary), plus backlinks and graph view
+
 ## Core Principles
 
 ### 1. User Needs Are a Living Document
@@ -50,14 +59,16 @@ The methodology described here is one effective approach, not a rigid standard. 
 
 **Effort:** Substantial—plan for significant dedicated time.
 
-**Approach:**
-1. Gather all existing user stories/needs
-2. Initial pass to assess quality and consistency
-3. Bulk standardization of format
-4. Categorization and tagging
-5. Analysis for insights and gaps
+**Approach in Obsidian:**
+1. Gather all existing user stories/needs (from docs, spreadsheets, etc.)
+2. Create individual .md files for each need
+3. Use your template to ensure consistent frontmatter
+4. Fill in user types, journey stages using wiki-links
+5. Use Dataview to analyze and find gaps
 
 **Tip:** This is satisfying work but time-consuming. Block dedicated time rather than trying to fit it around other work.
+
+**In your setup:** You might create a temporary "needs-to-process" folder, then move refined needs to `example-1/outputs/needs/` once complete.
 
 ### Project Start
 
@@ -71,12 +82,19 @@ The methodology described here is one effective approach, not a rigid standard. 
 
 **Effort:** Light—filtering and reviewing existing needs.
 
-**Approach:**
-1. Filter needs by relevant user types
-2. Filter by relevant journey stages
-3. Review for project relevance
-4. Flag needs this project will address
-5. Note any apparent gaps for research
+**Approach in Obsidian with Bases:**
+1. Open your User Needs Base
+2. Create a view filtered by relevant user types and journey stages
+3. Create a project note that links to relevant needs
+4. Add a `projects:` field to need frontmatter to track which project addresses it
+5. Use a Base view to see gaps (e.g., filter for empty categories)
+
+**Example Base setup for project start:**
+- **View name:** "Project: Registration Flow"
+- **Filter:** `user journey stage` contains `[[registration]]` AND `user type` contains `[[user]]`
+- **Visible properties:** ID, as a, I need to, so that, category
+- **Sort by:** category
+- This gives you all user needs for registration at a glance
 
 ### Project End
 
@@ -90,13 +108,20 @@ The methodology described here is one effective approach, not a rigid standard. 
 
 **Effort:** Medium—integrating new findings.
 
-**Approach:**
-1. Extract new needs from research
-2. Check against existing needs for duplicates
-3. Standardize format
-4. Categorize and tag
-5. Look for patterns or gaps
-6. Consider whether new research invalidates old needs
+**Approach in Obsidian with Bases:**
+1. Extract new needs from research notes
+2. Search existing needs to check for duplicates: `path:example-1/outputs/needs "I need to: [action]"`
+3. Create new .md files using your template
+4. Add wiki-links for user types and journey stages
+5. Open your Bases view to see the new needs appear automatically
+6. Use Bases filtering to analyze patterns (group by outcome, category, etc.)
+7. Update or archive needs if research changes understanding
+
+**Workflow tip:**
+- Keep research notes in a separate folder
+- Link from research notes to needs: "This research identified [[accept an invite and land in the correct workspace]]"
+- Link from needs back to research: Add `source: [[Research Session 5]]` in frontmatter
+- Create a Bases view called "Recent Needs" filtered by date to see new additions
 
 **Critical timing:** Do this _toward_ the end with enough runway to address gaps, not _at_ the very end when it's too late to do follow-up research.
 
@@ -316,52 +341,125 @@ The methodology described here is one effective approach, not a rigid standard. 
 
 **Problem:** Over time, new needs get added without consistent categorization.
 
-**Solutions:**
-- Use dropdowns wherever possible
-- Document categorization rationale
-- Include examples for each category
-- Regular review cycles to catch drift
-- Brief new team members on standards
+**Solutions in Obsidian:**
+- **Use wiki-links:** Obsidian suggests existing links, preventing typos
+- **Maintain reference notes:** Create notes like "Valid User Roles" listing all accepted values
+- **Use templates:** Always create new needs from `templates/user-need.md`
+- **Regular review:** Periodically check backlinks to ensure consistency
+- **Document standards:** Keep a "User Needs Guide" note with examples
+- **Onboarding:** Show new team members the template and reference notes
+
+**Example reference note:** `user-roles-reference.md`
+```markdown
+# Valid User Roles
+
+Use these values in the "as a:" field:
+
+- teammate
+- admin
+- guest
+- external collaborator
+
+Examples:
+- [[accept an invite and land in the correct workspace]]
+```
 
 ### Managing Growth
 
 **Problem:** Repository grows to hundreds or thousands of needs.
 
-**Solutions:**
-- Use filtering and views extensively
-- Create project-specific subsets
-- Sunset outdated needs (archive, don't delete)
-- Consider splitting very large repositories by product area
-- Maintain a "top 20" needs summary
+**Solutions in Obsidian:**
+- **Folder organization:** Use subfolders like `needs/core/`, `needs/advanced/`, `needs/archived/`
+- **Dataview views:** Create saved queries for different perspectives
+- **Tags:** Use tags like `#priority-high` or `#validated` for flexible filtering
+- **Project notes:** Create notes that link to subsets of relevant needs
+- **Archive folder:** Move outdated needs to `needs/archived/` rather than deleting
+- **Summary notes:** Create a "Top User Needs" note with links to most important ones
 
-### Tool Selection
+**Example folder structure:**
+```
+example-1/
+  outputs/
+    needs/
+      core/           # Essential needs
+      emerging/       # Newly discovered
+      archived/       # No longer relevant
+```
 
-**Considerations:**
-- **Scale:** Will you have dozens or thousands of needs?
-- **Collaboration:** How many people need access?
-- **Analysis:** What grouping/filtering capabilities do you need?
-- **Integration:** Does it need to connect to other tools?
-- **Longevity:** Can you export if you switch tools?
+**Example summary note:**
+```markdown
+# Top User Needs
 
-**Options:**
-- **Spreadsheet:** Simple, universal, limited grouping
-- **Airtable:** Visual, collaborative, good filtering
-- **Coda:** Powerful formulas, flexible views
-- **Specialized tools:** Dovetail, Aurelius, UserQ
-- **Custom database:** Maximum flexibility, requires maintenance
+## Registration & Onboarding
+- [[accept an invite and land in the correct workspace]]
+- [[verify eligibility for access]]
+
+## Daily Use
+- [[find what I'm looking for]]
+- [[see my assigned work]]
+```
+
+### Your Tool: Obsidian
+
+You've chosen **Obsidian** with markdown files. This provides:
+
+**Strengths for your use case:**
+- **Future-proof:** Plain text files will always be readable
+- **Version control:** Works naturally with Git
+- **Relationships:** Wiki-links create natural connections
+- **Flexibility:** Easy to add custom fields
+- **No lock-in:** Can migrate to any system that reads markdown
+- **Graph view:** Visualize relationships between needs, types, stages
+- **Local-first:** Your data stays with you
+
+**Best practices for Obsidian Bases:**
+- **Bases core plugin:** Your primary interface (essential)
+- **Create multiple views:** Different perspectives for different questions
+- **Templater plugin:** Automate new need creation
+- **Consistent naming:** Filename = "I need to" field
+- **Wiki-links:** Use for user types, journey stages
+- **Frontmatter:** Keep structure consistent via template
+- **Git tracking:** Commit changes to track evolution over time
+- **Inline editing in Bases:** Update properties directly in views
+
+**Alternative tools (for reference):**
+- **Spreadsheet:** Simple but limited
+- **Airtable:** Visual, collaborative
+- **Coda:** Powerful formulas
+- **Specialized:** Dovetail, Aurelius, UserQ
+
+Your Obsidian setup offers similar capabilities through different mechanisms.
 
 ### Versioning
 
-**Approaches:**
-- **Living document:** Single repository that evolves (recommended for most)
-- **Snapshots:** Freeze needs at project end, start fresh for next
-- **Branching:** Main repository plus project-specific forks
+**With Obsidian and Git:**
+Your markdown files are naturally version-controllable.
 
-**Recommendation:** Treat as living document with light versioning:
-- Track date added and source project
-- Flag needs when they change substantially
-- Archive superseded needs rather than deleting
-- Maintain changelog for major taxonomy changes
+**Recommended approach:**
+- **Git repository:** Track your entire Obsidian vault or just the needs folder
+- **Commit on milestones:** After project end, after bulk refinement, etc.
+- **Frontmatter date fields:** Add `created:` and `last_modified:` fields
+- **Archive folder:** Move superseded needs to `needs/archived/` with date
+- **Git history:** View evolution of individual needs via Git log
+
+**Example frontmatter with versioning:**
+```yaml
+---
+ID: "8"
+created: 2024-01-15
+last_modified: 2024-03-20
+status: validated
+user type: "[[user]]"
+as a: teammate
+# ... rest of fields
+---
+```
+
+**Benefits:**
+- See when each need was discovered
+- Track how needs evolved over time
+- Restore old versions if needed
+- Understand research timeline
 
 ## Quality Indicators
 
@@ -390,22 +488,36 @@ The methodology described here is one effective approach, not a rigid standard. 
 
 If you're starting from scratch or have limited time:
 
-**Minimal structure:**
-1. Standardize to As a / I need to / So that (skip "Who is" initially)
-2. Create 3-5 user type categories
-3. Identify 5-8 broad epics
-4. Map to basic journey (Before/During/After or similar)
+**Minimal structure in Obsidian:**
+1. Create .md files with basic frontmatter: ID, "as a", "I need to", "so that"
+2. Create 3-5 user type notes (e.g., `[[user]]`, `[[admin]]`, `[[guest]]`)
+3. Create 5-8 journey stage notes (e.g., `[[registration]]`, `[[daily use]]`)
+4. Link needs to types and stages using wiki-links
+5. Use your template for consistency
 
 **Skip for now:**
+- "who is" qualifiers (add when you find cross-cutting needs)
 - Detailed acceptance criteria
+- Categories and themes
 - Success/failure impacts
-- Detailed theme taxonomy
-- Cross-project tracking
+- Complex Dataview queries
 
 **Iterate later:**
-- Add complexity as repository proves useful
-- Let patterns emerge before over-structuring
-- Start with free text, convert to dropdowns when patterns stabilize
+- Add fields as you discover patterns
+- Create categories when groupings become clear
+- Add themes after you have 20-30 needs
+- Build Dataview queries as you need specific views
+
+**Your first need could be as simple as:**
+```yaml
+---
+ID: "1"
+as a: teammate
+I need to: see my assigned work
+so that: I know what to focus on
+user journey stage: "[[daily use]]"
+---
+```
 
 ## Advanced Practices
 
