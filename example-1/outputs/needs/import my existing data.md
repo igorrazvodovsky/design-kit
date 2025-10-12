@@ -3,7 +3,7 @@ ID: "10"
 user type: "[[user]]"
 as a: switcher
 who is: transitioning from another system
-I need: import my existing data
+I need to: import my existing data
 so that: my history is available and trustworthy
 category:
 theme:

@@ -14,7 +14,7 @@ views:
       - user type
       - as a
       - who is
-      - I need
+      - I need to
       - so that
       - category
       - theme
@@ -29,5 +29,5 @@ views:
       note.user type: 112
       note.as a: 91
       note.who is: 231
-      note.I need: 251
+      note.I need to: 326
       note.so that: 213

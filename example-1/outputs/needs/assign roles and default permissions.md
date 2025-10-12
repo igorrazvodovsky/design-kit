@@ -10,5 +10,4 @@ theme:
 user journey stage: "[[setup]]"
 customer journey stage:
 acceptance criteria:
-I need: assign roles and default permissions
 ---
