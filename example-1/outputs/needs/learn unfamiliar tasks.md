@@ -7,6 +7,6 @@ I need to: learn how to perform unfamiliar tasks
 so that: I can expand my capabilities
 category: learning
 theme: skill development
-user journey stage:
+user journey stage: "[[daily use]]"
 customer journey stage:
 ---

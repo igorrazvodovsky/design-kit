@@ -7,6 +7,6 @@ I need to: delete items I no longer need
 so that: I can keep my workspace clean and focused
 category: core actions
 theme: removal
-user journey stage:
+user journey stage: "[[daily use]]"
 customer journey stage:
 ---

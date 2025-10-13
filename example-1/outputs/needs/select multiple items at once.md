@@ -7,6 +7,6 @@ I need to: select multiple items at once
 so that: I can perform actions on groups efficiently
 category: bulk operations
 theme: selection
-user journey stage:
+user journey stage: "[[daily use]]"
 customer journey stage:
 ---

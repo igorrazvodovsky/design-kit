@@ -7,6 +7,6 @@ I need to: follow items for updates
 so that: I stay informed about relevant changes
 category: collaboration
 theme: change tracking
-user journey stage:
+user journey stage: "[[daily use]]"
 customer journey stage:
 ---

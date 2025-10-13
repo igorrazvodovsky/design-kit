@@ -7,6 +7,6 @@ I need to: build domain knowledge
 so that: I can use domain-specific features effectively
 category: learning
 theme: domain expertise
-user journey stage:
+user journey stage: "[[daily use]]"
 customer journey stage:
 ---

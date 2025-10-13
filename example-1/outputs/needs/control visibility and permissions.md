@@ -7,6 +7,6 @@ I need to: control visibility and permissions
 so that: the right people have appropriate access
 category: collaboration
 theme: access control
-user journey stage:
+user journey stage: "[[daily use]]"
 customer journey stage:
 ---

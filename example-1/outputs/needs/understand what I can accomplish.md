@@ -5,7 +5,7 @@ as a: new user
 who is: just joined
 I need to: understand what I can accomplish here
 so that: I can set appropriate expectations and goals
-category: orientation
+category: discovery
 theme: capability awareness
 user journey stage: "[[example-1/outputs/user-journey/phases/phase-2]]"
 customer journey stage:

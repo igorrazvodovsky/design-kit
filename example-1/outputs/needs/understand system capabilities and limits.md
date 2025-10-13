@@ -7,6 +7,6 @@ I need to: understand system capabilities and limitations
 so that: I can plan work within system capabilities
 category: discovery
 theme: capability awareness
-user journey stage:
+user journey stage: "[[daily use]]"
 customer journey stage:
 ---

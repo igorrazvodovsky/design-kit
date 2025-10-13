@@ -7,6 +7,6 @@ I need to: see my assigned work
 so that: I know what requires my attention
 category: collaboration
 theme: personal queue
-user journey stage:
+user journey stage: "[[daily use]]"
 customer journey stage:
 ---

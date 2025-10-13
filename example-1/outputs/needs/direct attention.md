@@ -7,6 +7,6 @@ I need to: direct specific people's attention to something that requires their r
 so that: the right people see it and can provide the input I need
 category: collaboration
 theme: directed communication
-user journey stage:
+user journey stage: "[[daily use]]"
 customer journey stage:
 ---

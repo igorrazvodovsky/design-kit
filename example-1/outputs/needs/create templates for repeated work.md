@@ -7,6 +7,6 @@ I need to: create templates for repeated work
 so that: I start with structure rather than from scratch
 category: automation
 theme: templating
-user journey stage:
+user journey stage: "[[optimization]]"
 customer journey stage:
 ---

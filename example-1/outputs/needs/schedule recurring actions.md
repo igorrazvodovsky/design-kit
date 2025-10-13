@@ -7,6 +7,6 @@ I need to: schedule recurring actions
 so that: I don't have to remember to do routine work
 category: automation
 theme: scheduling
-user journey stage:
+user journey stage: "[[optimization]]"
 customer journey stage:
 ---

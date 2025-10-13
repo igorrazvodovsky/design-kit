@@ -7,6 +7,6 @@ I need to: trust the system won't lose my work
 so that: I can focus on the task rather than worrying about data loss
 category: trust & safety
 theme: reliability
-user journey stage:
+user journey stage: "[[daily use]]"
 customer journey stage:
 ---

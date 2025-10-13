@@ -1,5 +1,3 @@
-# User Needs Best Practices
-
 Practical guidance for managing user needs as a living practice, including team collaboration, timing, and common scenarios.
 
 ## Your Setup

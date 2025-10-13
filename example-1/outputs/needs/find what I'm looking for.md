@@ -7,6 +7,6 @@ I need to: find what I'm looking for
 so that: I can accomplish my task efficiently
 category: discovery
 theme: findability
-user journey stage:
+user journey stage: "[[daily use]]"
 customer journey stage:
 ---

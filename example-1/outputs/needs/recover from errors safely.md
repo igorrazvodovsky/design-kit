@@ -7,6 +7,6 @@ I need to: recover from errors safely
 so that: mistakes don't have permanent consequences
 category: trust & safety
 theme: error tolerance
-user journey stage:
+user journey stage: "[[daily use]]"
 customer journey stage:
 ---

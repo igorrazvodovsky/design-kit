@@ -7,6 +7,6 @@ I need to: duplicate existing items
 so that: I can build on previous work efficiently
 category: core actions
 theme: replication
-user journey stage:
+user journey stage: "[[daily use]]"
 customer journey stage:
 ---

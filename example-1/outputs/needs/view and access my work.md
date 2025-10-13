@@ -7,6 +7,6 @@ I need to: view and access my work
 so that: I can understand what I have and what needs attention
 category: core actions
 theme: retrieval
-user journey stage:
+user journey stage: "[[daily use]]"
 customer journey stage:
 ---

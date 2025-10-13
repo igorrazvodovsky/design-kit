@@ -7,6 +7,6 @@ I need to: assign work to teammates
 so that: responsibilities are clear
 category: collaboration
 theme: task assignment
-user journey stage:
+user journey stage: "[[daily use]]"
 customer journey stage:
 ---

@@ -7,6 +7,6 @@ I need to: know my data is secure
 so that: I can trust the system with important information
 category: trust & safety
 theme: security assurance
-user journey stage:
+user journey stage: "[[daily use]]"
 customer journey stage:
 ---

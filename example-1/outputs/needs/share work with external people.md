@@ -7,6 +7,6 @@ I need to: share work with external people
 so that: I can get input from those outside the team
 category: collaboration
 theme: external sharing
-user journey stage:
+user journey stage: "[[daily use]]"
 customer journey stage:
 ---

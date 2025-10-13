@@ -7,6 +7,6 @@ I need to: organize items into structures
 so that: I can navigate and understand relationships
 category: core actions
 theme: organization
-user journey stage:
+user journey stage: "[[daily use]]"
 customer journey stage:
 ---

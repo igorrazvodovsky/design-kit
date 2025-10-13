@@ -7,6 +7,6 @@ I need to: delete multiple items safely
 so that: I can remove obsolete content without risk
 category: bulk operations
 theme: batch deletion
-user journey stage:
+user journey stage: "[[daily use]]"
 customer journey stage:
 ---

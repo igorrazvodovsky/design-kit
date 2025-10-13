@@ -7,6 +7,6 @@ I need to: control what external people can do
 so that: I maintain appropriate boundaries
 category: collaboration
 theme: external access control
-user journey stage:
+user journey stage: "[[daily use]]"
 customer journey stage:
 ---

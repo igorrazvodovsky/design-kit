@@ -7,6 +7,6 @@ I need to: coordinate with team members
 so that: we can work together without conflicts or duplication
 category: collaboration
 theme: coordination
-user journey stage:
+user journey stage: "[[daily use]]"
 customer journey stage:
 ---

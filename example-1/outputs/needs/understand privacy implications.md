@@ -7,6 +7,6 @@ I need to: understand privacy implications
 so that: I can make informed decisions about what I share
 category: trust & safety
 theme: privacy awareness
-user journey stage:
+user journey stage: "[[daily use]]"
 customer journey stage:
 ---

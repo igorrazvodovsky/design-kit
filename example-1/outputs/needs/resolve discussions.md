@@ -7,6 +7,6 @@ I need to: resolve discussions
 so that: we can track what's been addressed
 category: collaboration
 theme: conversation management
-user journey stage:
+user journey stage: "[[daily use]]"
 customer journey stage:
 ---

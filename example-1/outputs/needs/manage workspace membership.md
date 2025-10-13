@@ -7,6 +7,6 @@ I need to: manage workspace membership
 so that: the team composition reflects organizational changes
 category: collaboration
 theme: team management
-user journey stage:
+user journey stage: "[[daily use]]"
 customer journey stage:
 ---

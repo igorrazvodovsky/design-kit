@@ -1,5 +1,3 @@
-# User Needs Writing Guide
-
 A reference for writing clear, actionable user needs based on research insights.
 
 > **For practical execution:** See commands [`sketch-user-needs.md`](commands/discovery/research/process/sketch-user-needs.md) and [`refine-user-needs.md`](commands/discovery/research/process/refine-user-needs.md)

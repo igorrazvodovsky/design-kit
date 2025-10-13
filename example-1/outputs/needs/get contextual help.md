@@ -7,6 +7,6 @@ I need to: get contextual help
 so that: I can understand what to do without leaving my workflow
 category: learning
 theme: in-context support
-user journey stage:
+user journey stage: "[[daily use]]"
 customer journey stage:
 ---

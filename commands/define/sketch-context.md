@@ -1,2 +1,2 @@
 input:
-output: ecosystem sketch based on [[context]] template
+output: ecosystem sketch based on [[templates/discovery/context]] template

@@ -7,6 +7,6 @@ I need to: move items between locations
 so that: I can adapt structure as understanding evolves
 category: core actions
 theme: reorganization
-user journey stage:
+user journey stage: "[[daily use]]"
 customer journey stage:
 ---

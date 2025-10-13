@@ -7,6 +7,6 @@ I need to: move or organize items in bulk
 so that: I can reorganize without tedious individual actions
 category: bulk operations
 theme: batch reorganization
-user journey stage:
+user journey stage: "[[daily use]]"
 customer journey stage:
 ---

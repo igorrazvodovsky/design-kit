@@ -7,6 +7,6 @@ I need to: filter items before bulk actions
 so that: I operate on exactly the right set
 category: bulk operations
 theme: targeted selection
-user journey stage:
+user journey stage: "[[daily use]]"
 customer journey stage:
 ---

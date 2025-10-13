@@ -7,6 +7,6 @@ I need to: complete tasks quickly
 so that: I can work more efficiently
 category: performance
 theme: efficiency
-user journey stage:
+user journey stage: "[[daily use]]"
 customer journey stage:
 ---

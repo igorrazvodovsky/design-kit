@@ -7,6 +7,6 @@ I need to: see what changed since I last looked
 so that: I can quickly understand recent activity
 category: collaboration
 theme: activity awareness
-user journey stage:
+user journey stage: "[[daily use]]"
 customer journey stage:
 ---
