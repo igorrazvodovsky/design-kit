@@ -12,6 +12,7 @@ views:
       and:
         - file.inFolder("example-1/outputs/needs")
     order:
+      - ID
       - user type
       - as a
       - who is
@@ -24,12 +25,10 @@ views:
       - acceptance criteria
       - file.name
     sort:
-      - property: so that
-        direction: ASC
-      - property: category
-        direction: ASC
       - property: ID
-        direction: ASC
+        direction: DESC
+      - property: so that
+        direction: DESC
     columnSize:
       note.user type: 112
       note.as a: 115

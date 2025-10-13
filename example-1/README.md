@@ -18,7 +18,8 @@ This hypothetical use case demonstrates the toolkit in use.
 	- review and edit
 	- research: planning
 		- run either a [[sketch-study-plan]] or [[sketch-research-driven-design-project]]
-		-
+		- participant segments & screening
+		- run [plan-interview](plan-interview.md)
 	- research: execution
 		- ...
 	- research: processing
@@ -30,4 +31,4 @@ This hypothetical use case demonstrates the toolkit in use.
 	- outputs
 		- frame, objective, and context descriptions are updated to reflect discovery results
 		- plus big idea
--
+- 

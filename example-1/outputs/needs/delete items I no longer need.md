@@ -1,7 +1,7 @@
 ---
-ID: "151"
-user type: "[[user]]"
-as a: "[[user]]"
+ID: 151
+user type: "[[example-1/outputs/user types/user|user]]"
+as a: "[[example-1/outputs/user types/user|user]]"
 who is: managing clutter
 I need to: delete items I no longer need
 so that: I can keep my workspace clean and focused

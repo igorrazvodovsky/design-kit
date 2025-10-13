@@ -1,6 +1,6 @@
 ---
-ID: "8"
-user type: "[[user]]"
+ID: 111
+user type: "[[example-1/outputs/user types/user|user]]"
 as a: team member
 who is: invited by an admin
 I need to: accept an invite and land in the correct workspace

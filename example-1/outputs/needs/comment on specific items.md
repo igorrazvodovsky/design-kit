@@ -1,6 +1,6 @@
 ---
-ID: "169"
-user type: "[[user]]"
+ID: 169
+user type: "[[example-1/outputs/user types/user|user]]"
 as a: team member
 who is: providing feedback
 I need to: comment on specific items

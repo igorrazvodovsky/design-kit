@@ -2,7 +2,7 @@
 
 A reference for writing clear, actionable user needs based on research insights.
 
-> **For practical execution:** See commands [`sketch-user-needs.md`](../commands/define/sketch-user-needs.md) and [`refine-user-needs.md`](../commands/define/refine-user-needs.md)
+> **For practical execution:** See commands [`sketch-user-needs.md`](sketch-user-needs.md) and [`refine-user-needs.md`](refine-user-needs.md)
 
 ## Your Setup
 
@@ -310,8 +310,8 @@ user journey stage: "[[registration]]"
 ## Next Steps
 
 **For executing the process:**
-- Use [`sketch-user-needs.md`](../commands/define/sketch-user-needs.md) command for step-by-step extraction
-- Use [`refine-user-needs.md`](../commands/define/refine-user-needs.md) command for analysis and refinement
+- Use [`sketch-user-needs.md`](sketch-user-needs.md) command for step-by-step extraction
+- Use [`refine-user-needs.md`](refine-user-needs.md) command for analysis and refinement
 
 **For deeper methodology:**
 - See [[user-needs-refinement-process]] for systematic refinement approach

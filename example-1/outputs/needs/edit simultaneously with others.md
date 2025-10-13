@@ -1,6 +1,6 @@
 ---
-ID: "174"
-user type: "[[user]]"
+ID: 174
+user type: "[[example-1/outputs/user types/user|user]]"
 as a: team member
 who is: collaborating in real-time
 I need to: edit simultaneously with others

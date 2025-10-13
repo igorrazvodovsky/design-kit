@@ -1,6 +1,6 @@
 ---
-ID: "180"
-user type: "[[user]]"
+ID: 180
+user type: "[[example-1/outputs/user types/user|user]]"
 as a: team member
 who is: managing my workload
 I need to: see my assigned work

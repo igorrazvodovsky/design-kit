@@ -1,6 +1,6 @@
 ---
-ID: "102"
-user type: "[[user]]"
+ID: 102
+user type: "[[example-1/outputs/user types/user|user]]"
 as a: prospective user
 who is: evaluating the system
 I need to: understand what this system offers before signing up

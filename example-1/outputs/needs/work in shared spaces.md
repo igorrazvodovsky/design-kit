@@ -1,6 +1,6 @@
 ---
-ID: "172"
-user type: "[[user]]"
+ID: 172
+user type: "[[example-1/outputs/user types/user|user]]"
 as a: team member
 who is: collaborating on projects
 I need to: work in shared spaces

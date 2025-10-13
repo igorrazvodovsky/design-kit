@@ -1,7 +1,7 @@
 ---
-ID: "6"
-user type: "[[user]]"
-as a: "[[user]]"
+ID: 109
+user type: "[[example-1/outputs/user types/user|user]]"
+as a: "[[example-1/outputs/user types/user|user]]"
 I need to: access the system
 so that: I can use the features I need to complete my work
 user journey stage: "[[registration]]"

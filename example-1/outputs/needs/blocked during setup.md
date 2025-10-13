@@ -1,6 +1,6 @@
 ---
-ID: "11"
-user type: "[[user]]"
+ID: 122
+user type: "[[example-1/outputs/user types/user|user]]"
 as a: new user
 who is: blocked during setup
 I need to: get help

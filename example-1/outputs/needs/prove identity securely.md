@@ -1,6 +1,6 @@
 ---
-ID: "104"
-user type: "[[user]]"
+ID: 104
+user type: "[[example-1/outputs/user types/user|user]]"
 as a: new user
 who is: creating an account
 I need to: prove my identity securely

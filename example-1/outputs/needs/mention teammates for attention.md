@@ -1,6 +1,6 @@
 ---
-ID: "170"
-user type: "[[user]]"
+ID: 170
+user type: "[[example-1/outputs/user types/user|user]]"
 as a: team member
 who is: needing someone's input
 I need to: mention teammates for attention

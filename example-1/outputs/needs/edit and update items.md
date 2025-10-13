@@ -1,7 +1,7 @@
 ---
-ID: "150"
-user type: "[[user]]"
-as a: "[[user]]"
+ID: 150
+user type: "[[example-1/outputs/user types/user|user]]"
+as a: "[[example-1/outputs/user types/user|user]]"
 who is: refining my work
 I need to: edit and update items
 so that: my work stays current and accurate

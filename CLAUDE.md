@@ -41,11 +41,3 @@ Early experiments applying the structure to scenarios. These are tests, not refe
 - Many files contain only single-line placeholders - this is intentional for testing structure
 - When developing new commands or templates, focus on the _relationships between artifacts_ and how they flow through the process
 
-### Wiki-Link Resolution
-
-This repository uses Obsidian for knowledge management. Files contain wiki-links like `[[user]]` that reference other documents.
-
-- **Link mappings** are defined in [.claude/link-mappings.json](.claude/link-mappings.json)
-- When encountering `[[entity-name]]`, resolve it using the mappings file
-- Obsidian uses "shortest path" resolution by default, so `[[user]]` finds `example-1/outputs/user types/user.md`
-- Update the mappings file when adding new entity types to maintain alignment between Obsidian and Claude Code

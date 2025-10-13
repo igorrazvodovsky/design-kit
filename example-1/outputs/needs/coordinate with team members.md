@@ -1,6 +1,6 @@
 ---
-ID: "128"
-user type: "[[user]]"
+ID: 128
+user type: "[[example-1/outputs/user types/user|user]]"
 as a: team member
 who is: working on shared tasks
 I need to: coordinate with team members

@@ -1,6 +1,6 @@
 ---
-ID: "179"
-user type: "[[user]]"
+ID: 179
+user type: "[[example-1/outputs/user types/user|user]]"
 as a: team member
 who is: distributing tasks
 I need to: assign work to teammates

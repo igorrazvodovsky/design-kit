@@ -1,6 +1,6 @@
 ---
-ID: "125"
-user type: "[[user]]"
+ID: 125
+user type: "[[example-1/outputs/user types/user|user]]"
 as a: team member
 who is: working in shared space
 I need to: understand who else has access

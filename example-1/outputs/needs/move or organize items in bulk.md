@@ -1,7 +1,7 @@
 ---
-ID: "159"
-user type: "[[user]]"
-as a: "[[user]]"
+ID: 159
+user type: "[[example-1/outputs/user types/user|user]]"
+as a: "[[example-1/outputs/user types/user|user]]"
 who is: restructuring content
 I need to: move or organize items in bulk
 so that: I can reorganize without tedious individual actions

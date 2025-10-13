@@ -1,6 +1,6 @@
 ---
-ID: "106"
-user type: "[[user]]"
+ID: 106
+user type: "[[example-1/outputs/user types/user|user]]"
 as a: new user
 who is: just joined
 I need to: understand what I can accomplish here

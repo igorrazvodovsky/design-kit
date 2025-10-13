@@ -1,7 +1,7 @@
 ---
-ID: "137"
-user type: "[[user]]"
-as a: "[[user]]"
+ID: 137
+user type: "[[example-1/outputs/user types/user|user]]"
+as a: "[[example-1/outputs/user types/user|user]]"
 who is: made a mistake
 I need to: recover from errors safely
 so that: mistakes don't have permanent consequences
