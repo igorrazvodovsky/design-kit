@@ -1,6 +1,4 @@
-# User Needs Refinement Process
-
-A systematic approach to organizing, categorizing, and analyzing user needs to uncover insights and gaps.
+A systematic approach to organising, categorising, and analysing user needs to uncover insights and gaps.
 
 ## Your Setup
 

@@ -1,23 +1,22 @@
-# sketch-user-needs
-
 Extract and document user needs from research insights or existing documentation.
 
 ## Input
 
 - Research notes, interview transcripts, or observations (provide file paths or content)
 - Existing user stories or requirements (optional)
-- [[user-need]] template at `templates/user-need.md`
+- Template at `templates/user-need.md`
 
 ## Instructions
 
 ### 1. Extract Needs from Research
 
-Use **Read** tool to review source material. Look for expressions of what users need to accomplish:
+Review source material. Look for expressions of what users need to accomplish:
 
 - Listen for goals, not solutions ("I need to see my tasks" not "I want a dashboard")
 - Distinguish needs from wants
 - Look for the "why" behind stated requests
 - Identify the outcome users are trying to achieve
+- Think in solution/tech-agnostic terms
 
 ### 2. Structure Each Need
 
@@ -44,7 +43,6 @@ customer journey stage: [(optional) customer journey stage]
 **ID:**
 - Sequential number starting from 1
 - Use **Glob** to count existing: `pattern="example-1/outputs/needs/*.md"`
-- Format as string: `"23"`
 
 **user type:**
 - High-level user category (for grouping)
@@ -197,7 +195,7 @@ As you document needs:
 2. Create notes for new types using **Write** if needed
 3. Use **Glob** to check for journey stage notes: `pattern="**/journey stages/*.md"`
 4. Create stage notes using **Write** if needed
-5. Reference types and stages via wiki-links in need frontmatter
+5. Reference types and stages in need frontmatter
 
 ### 5. Watch for Patterns
 
@@ -236,8 +234,8 @@ After creating needs, use **Write** to create a summary file documenting:
 ## Output
 
 - Individual `.md` files in `example-1/outputs/needs/`
-- Each file follows [[user-need]] template structure
-- Files linked via wiki-links to user types and journey stages
+- Each file follows [user-need](templates/user-need.md) template structure
+- Files linked to user types and journey stages
 - Summary file: `example-1/outputs/user-needs-extraction-summary.md`
 
 ## Common Pitfalls
@@ -259,31 +257,6 @@ After creating needs, use **Write** to create a summary file documenting:
 
 **✓ Different levels**
 - "I need to: save my work" / "so that: I don't lose progress if interrupted"
-
-## Tool Usage Examples
-
-### Check for existing needs
-```
-Glob: pattern="example-1/outputs/needs/*.md"
-```
-
-### Find next available ID
-```
-Grep: pattern="^ID:" path="example-1/outputs/needs" output_mode="content"
-```
-Parse results to find highest number, add 1.
-
-### Check for duplicates before creating
-```
-Grep: pattern="I need to: accept an invite" path="example-1/outputs/needs" output_mode="files_with_matches"
-```
-
-### Create new need file
-```
-Write:
-  file_path="example-1/outputs/needs/accept an invite and land in the correct workspace.md"
-  content="---\nID: \"8\"\nuser type: \"[[user]]\"\n..."
-```
 
 ## Examples
 
@@ -338,10 +311,10 @@ user journey stage: "[[daily-use]]"
 
 ## Related Commands
 
-- [[refine-user-needs]] — After initial extraction, refine and categorize needs
-- [[map-journey]] — Identify journey stages where needs occur
-- [[sketch-context]] — Understand ecosystem where needs arise
+- [refine-user-needs](commands/discovery/explore/refine-user-needs.md) — After initial extraction, refine and categorize needs
+- [map-journey](commands/discovery/explore/map-journey.md) — Identify journey stages where needs occur
+- [sketch-context](commands/define/sketch-context.md) — Understand ecosystem where needs arise
 
 ## References
 
-See [[user-needs-writing-guide]], [[user-needs-refinement-process]], and [[user-needs-best-practices]] in `references/` for detailed methodology.
+See [user-needs-writing-guide](references/user-needs-writing-guide.md), [user-needs-refinement-process](references/user-needs-refinement-process.md), and [user-needs-best-practices](references/user-needs-best-practices.md) for detailed methodology.
