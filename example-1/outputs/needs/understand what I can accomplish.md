@@ -7,6 +7,6 @@ I need to: understand what I can accomplish here
 so that: I can set appropriate expectations and goals
 category: orientation
 theme: capability awareness
-user journey stage: "[[onboarding]]"
+user journey stage: "[[example-1/outputs/user-journey/phases/phase-2]]"
 customer journey stage:
 ---

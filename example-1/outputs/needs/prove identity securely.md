@@ -7,6 +7,6 @@ I need to: prove my identity securely
 so that: my account is protected from unauthorised access
 category: access
 theme: security
-user journey stage: "[[registration]]"
+user journey stage: "[[example-1/outputs/user-journey/phases/phase-3]]"
 customer journey stage:
 ---

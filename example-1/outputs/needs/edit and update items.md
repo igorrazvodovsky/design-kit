@@ -7,6 +7,6 @@ I need to: edit and update items
 so that: my work stays current and accurate
 category: core actions
 theme: modification
-user journey stage:
+user journey stage: "[[daily use]]"
 customer journey stage:
 ---

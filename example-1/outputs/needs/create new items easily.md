@@ -7,6 +7,6 @@ I need to: create new items easily
 so that: I can capture ideas and work without friction
 category: core actions
 theme: creation
-user journey stage:
+user journey stage: "[[daily use]]"
 customer journey stage:
 ---

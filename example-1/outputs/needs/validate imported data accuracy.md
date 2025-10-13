@@ -7,6 +7,6 @@ I need to: validate imported data accuracy
 so that: I can trust the system with critical information
 category: migration
 theme: trustworthiness
-user journey stage: "[[onboarding]]"
+user journey stage: "[[example-1/outputs/user-journey/phases/phase-2|phase-2]]"
 customer journey stage:
 ---

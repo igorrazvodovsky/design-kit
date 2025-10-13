@@ -5,9 +5,8 @@ as a: switcher
 who is: transitioning from another system
 I need to: import my existing data
 so that: my history is available and trustworthy
-category:
-theme:
-user journey stage: "[[onboarding]]"
+category: migration
+theme: data continuity
+user journey stage: "[[example-1/outputs/user-journey/phases/phase-2|phase-2]]"
 customer journey stage:
-acceptance criteria:
 ---

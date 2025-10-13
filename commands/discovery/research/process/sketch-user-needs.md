@@ -311,7 +311,7 @@ user journey stage: "[[daily-use]]"
 
 ## Related Commands
 
-- [refine-user-needs](commands/discovery/explore/refine-user-needs.md) — After initial extraction, refine and categorize needs
+- [refine-user-needs](commands/discovery/research/process/refine-user-needs.md) — After initial extraction, refine and categorize needs
 - [map-journey](commands/discovery/explore/map-journey.md) — Identify journey stages where needs occur
 - [sketch-context](commands/define/sketch-context.md) — Understand ecosystem where needs arise
 

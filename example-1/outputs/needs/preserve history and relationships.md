@@ -7,6 +7,6 @@ I need to: preserve my history and relationships
 so that: connections between data remain meaningful
 category: migration
 theme: data integrity
-user journey stage: "[[onboarding]]"
+user journey stage: "[[example-1/outputs/user-journey/phases/phase-2|phase-2]]"
 customer journey stage:
 ---

@@ -5,9 +5,8 @@ as a: "[[admin]]"
 who is: setting up a team
 I need to: assign roles and default permissions
 so that: people can see and do only what’s appropriate
-category:
-theme:
-user journey stage: "[[setup]]"
+category: collaboration
+theme: access control
+user journey stage: "[[example-1/outputs/user-journey/phases/phase-4]]"
 customer journey stage:
-acceptance criteria:
 ---
