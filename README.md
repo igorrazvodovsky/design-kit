@@ -29,16 +29,17 @@ Also, there are pick-and-choose commands (e.g. `/plan-exploration-and-sensemakin
 
 ### Figma
 
-...
+TODO: Using Figma MCP server, integrating with Make prototypes, etc.
 
 ### User-research platform (e.g. Dovetail)
 
-...
+TODO: When research processing happens elsewhere, what, how, and how much should be exported/imported.
 
-### Analytics
+### Product analytics
 
-...
+TODO: Same as with research platforms.
 
-## Example
+## Using the kit with different types of design opportunities
 
-...
+TODO: new/existing product; amount of unknowns, etc.
+

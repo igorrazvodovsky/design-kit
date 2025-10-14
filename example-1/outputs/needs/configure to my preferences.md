@@ -7,6 +7,6 @@ I need to: configure system to my preferences
 so that: it works the way I think
 category: personalization
 theme: customization
-user journey stage: "[[customization]]"
+user journey stage: "[[access]]"
 customer journey stage:
 ---

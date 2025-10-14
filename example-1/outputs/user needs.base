@@ -25,6 +25,8 @@ views:
       - acceptance criteria
       - file.name
     sort:
+      - property: user journey stage
+        direction: ASC
       - property: ID
         direction: DESC
       - property: so that

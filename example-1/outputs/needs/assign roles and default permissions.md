@@ -7,6 +7,6 @@ I need to: assign roles and default permissions
 so that: people can see and do only what’s appropriate
 category: collaboration
 theme: access control
-user journey stage: "[[example-1/outputs/user-journey/phases/phase-4]]"
+user journey stage: "[[example-1/outputs/user-journey/phases/phase-4|phase-4]]"
 customer journey stage:
 ---

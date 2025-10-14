@@ -7,6 +7,6 @@ I need to: adapt workflows to my needs
 so that: the system supports my unique process
 category: personalization
 theme: workflow flexibility
-user journey stage: "[[customization]]"
+user journey stage: "[[access]]"
 customer journey stage:
 ---

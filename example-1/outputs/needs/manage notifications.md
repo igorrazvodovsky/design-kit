@@ -7,6 +7,6 @@ I need to: manage notifications and communications
 so that: I stay informed without being overwhelmed
 category: personalization
 theme: attention management
-user journey stage: "[[customization]]"
+user journey stage: "[[access]]"
 customer journey stage:
 ---

@@ -7,6 +7,6 @@ I need to: understand what I can accomplish here
 so that: I can set appropriate expectations and goals
 category: discovery
 theme: capability awareness
-user journey stage: "[[example-1/outputs/user-journey/phases/phase-2]]"
+user journey stage: "[[example-1/outputs/user-journey/phases/phase-2|phase-2]]"
 customer journey stage:
 ---
