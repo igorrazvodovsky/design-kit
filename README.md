@@ -2,7 +2,11 @@
 
 Here I'm trying to deconstruct my design process into core tasks and look for opportunities for human-LLM co-creation. By dividing the tasks into discrete units, I'm re-evaluating and re-framing my work. The result I'm aiming for is a collection of tools and templates that can be used to augment design.
 
+The kit uses a three-layer architecture—commands, skills, and agents—that separates what designers ask for (commands), how to do things (skills), and orchestration (agents).
+
 Inspired by [spec-kit](https://github.com/github/spec-kit).
+
+> Current state: early-stage experiments.
 
 ## Objective
 
@@ -17,13 +21,31 @@ Replacing [Figma](https://www.figma.com/) as a main design tool with an agentic 
 
 ## Structure
 
-Design is iterative, non-linear, and context-dependant, but there is still a sequence that underpins the general flow. Each task is mapped to the most relevant step in this process.
+Design is iterative, non-linear, and context-dependent, but there is still a sequence that underpins the general flow. Each task is mapped to the most relevant step in this process.
 
 **Define – Plan – Gather – Process – Explore – Focus – Build – Refine – Reflect**
 
-For example, when preparing for user interviews, a designer might run a `/sketch-interview-protocol` command to help them create/edit an interview protocol. That command uses existing study plan under `.../discovery/research/plan` folder and/or related interview debriefs in `/process/` to generate a `user-interview-protocol.md` draft in `/execution/`.
+The kit uses a three-layer architecture that separates concerns and enables intelligent, adaptive behavior:
 
-Also, there are pick-and-choose commands (e.g. `/plan-exploration-and-sensemaking`) that take the output of one step and suggest the content for the next, since not all available tasks are relevant in every situation.
+### Commands
+Lightweight triggers that designers type to start an activity. Each command maps to a step in the design process flow.
+
+### Skills
+Design methods and techniques.
+
+### Agents
+Autonomous processes that accomplish design goals by orchestrating skills.
+
+<!-- ### Getting Started -->
+<!-- 1. **See it in action:** Check out ... -->
+<!-- 2. **Use existing commands:** Start with `/sketch-user-needs` after conducting research -->
+
+<!--
+3. **Extend the system:**
+   - Add new skills to capture design methods you use
+   - Create agents that orchestrate skills for complex goals
+   - Build commands as entry points to your agents
+-->
 
 ## "Integration" with other tools
 
