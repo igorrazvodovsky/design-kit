@@ -33,7 +33,7 @@ Executable design tasks organised by process stage (discovery, define, explore, 
 
 Example: `commands/discovery/research/process/sketch-user-needs.md`
 
-### `.claude/skills/` - Reusable capabilities
+### `/skills/` - Reusable capabilities
 Claude Code skills providing specialised knowledge and workflows. Each skill is a self-contained package with:
 - `SKILL.md` - Instructions and procedural knowledge
 - `references/` - Documentation to load as needed

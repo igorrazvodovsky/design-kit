@@ -1,10 +1,10 @@
-# Design kit: deconstructing the design process
+# Design kit: deconstructing & augmenting the design process
 
 Here I'm trying to deconstruct my design process into core tasks and look for opportunities for human-LLM co-creation. By dividing the tasks into discrete units, I'm re-evaluating and re-framing my work. The result I'm aiming for is a collection of tools and templates that can be used to augment design.
 
 The kit uses a three-layer architecture—commands, skills, and agents—that separates what designers ask for (commands), how to do things (skills), and orchestration (agents).
 
-Inspired by [spec-kit](https://github.com/github/spec-kit).
+Inspired by [spec-kit](https://github.com/github/spec-kit) & [amplifier](https://github.com/microsoft/amplifier).
 
 > Current state: early-stage experiments.
 
@@ -15,37 +15,21 @@ Replacing [Figma](https://www.figma.com/) as a main design tool with an agentic 
 ## Goals
 
 - Build a self-propelling system where connections between tasks guide progression through the design process.
-- Nudge a designer from viewing a design process as problem-solving towards the idea of facilitating a conversation about goals and means.
+- ==Nudge a designer from viewing a design process as problem-solving towards facilitating a conversation about goals and means.== ^37066d
 - Nudge a designer towards systemic worldviews and using mindset, methods, and tools of systems thinking
 - Build in triggers for reflection-in-action – surfacing and questioning the current framing, trying new frames, probing them with experiments.
 
 ## Structure
 
-Design is iterative, non-linear, and context-dependent, but there is still a sequence that underpins the general flow. Each task is mapped to the most relevant step in this process.
+The kit uses a three-layer architecture that separates concerns and enables intelligent, adaptive behaviour:
+
+- Commands: triggers that designers type to start an activity. Each command maps to a step in the design process flow.
+- Skills: Design methods and techniques.
+- Agents: Autonomous processes that accomplish design goals by orchestrating skills.
+
+Design is iterative, non-linear, and context-dependent, but there is still a sequence that underpins the general flow. Skills and commands are mapped to the most relevant step in this process.
 
 **Define – Plan – Gather – Process – Explore – Focus – Build – Refine – Reflect**
-
-The kit uses a three-layer architecture that separates concerns and enables intelligent, adaptive behavior:
-
-### Commands
-Lightweight triggers that designers type to start an activity. Each command maps to a step in the design process flow.
-
-### Skills
-Design methods and techniques.
-
-### Agents
-Autonomous processes that accomplish design goals by orchestrating skills.
-
-<!-- ### Getting Started -->
-<!-- 1. **See it in action:** Check out ... -->
-<!-- 2. **Use existing commands:** Start with `/sketch-user-needs` after conducting research -->
-
-<!--
-3. **Extend the system:**
-   - Add new skills to capture design methods you use
-   - Create agents that orchestrate skills for complex goals
-   - Build commands as entry points to your agents
--->
 
 ## "Integration" with other tools
 
@@ -63,5 +47,5 @@ TODO: Same as with research platforms.
 
 ## Using the kit with different types of design opportunities
 
-TODO: new/existing product; amount of unknowns, etc.
+TODO: feature/product, new/existing stuff; amount of unknowns, etc.
 

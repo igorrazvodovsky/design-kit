@@ -1,2 +1,0 @@
-- example of a roadmap
-- having a roadmap copy in the project helps in picking a next thing to work on
