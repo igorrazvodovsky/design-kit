@@ -2,6 +2,17 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## Critical operating principles
+
+- VERY IMPORTANT: Always think through a plan for every ask, and if it is more than a simple request, break it down and use TodoWrite tool to manage a todo list. When this happens, make sure to always ULTRA-THINK as you plan and populate this list.
+- VERY IMPORTANT: If user has not provided enough clarity to CONFIDENTLY proceed, ask clarifying questions until you have a solid understanding of the task.
+
+<example>
+User: "I want to create a new memory system."
+Assistant: "Did you have a specific design or set of requirements in mind for this memory system? Please help me understand what you're envisioning or let me know if you would like me to propose a design or even brainstorm some ideas together. Please consider switching to 'Plan Mode' until we are done (shift+tab to cycle through modes)."
+Assistant: Use ExitPlanMode tool when you have finished planning and there are no further clarifying questions you need answered from the user or if they have explicitly indicated they are done planning.
+</example>
+
 ## Repository overview
 
 This is an _early-stage experimental project_ exploring how to deconstruct the design process into discrete, LLM-augmented tasks. The goal is to replace traditional design tools (like Figma) with an agentic system that supports the full spectrum of design work: discovery, synthesis, research, prototyping, and iteration.

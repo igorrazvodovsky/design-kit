@@ -15,7 +15,7 @@ Replacing [Figma](https://www.figma.com/) as a main design tool with an agentic 
 ## Goals
 
 - Build a self-propelling system where connections between tasks guide progression through the design process.
-- ==Nudge a designer from viewing a design process as problem-solving towards facilitating a conversation about goals and means.== ^37066d
+- Nudge a designer from viewing a design process as problem-solving towards facilitating a conversation about goals and means.
 - Nudge a designer towards systemic worldviews and using mindset, methods, and tools of systems thinking
 - Build in triggers for reflection-in-action – surfacing and questioning the current framing, trying new frames, probing them with experiments.
 
@@ -30,20 +30,6 @@ The kit uses a three-layer architecture that separates concerns and enables inte
 Design is iterative, non-linear, and context-dependent, but there is still a sequence that underpins the general flow. Skills and commands are mapped to the most relevant step in this process.
 
 **Define – Plan – Gather – Process – Explore – Focus – Build – Refine – Reflect**
-
-## "Integration" with other tools
-
-### Figma
-
-TODO: Using Figma MCP server, integrating with Make prototypes, etc.
-
-### User-research platform (e.g. Dovetail)
-
-TODO: When research processing happens elsewhere, what, how, and how much should be exported/imported.
-
-### Product analytics
-
-TODO: Same as with research platforms.
 
 ## Using the kit with different types of design opportunities
 
