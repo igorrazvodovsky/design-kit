@@ -33,11 +33,14 @@ The assistant uses a three-layer architecture that separates concerns and enable
 
 ### 2. Research repository
 
-TODO: Separate repository used as a git submodule?
+A knowledge base that serves as the primary context source for the design assistant. The [research repository boilerplate](https://github.com/igorrazvodovsky/research-repository-boilerplate) provides templates and tools for documenting research in a format that's human-readable and AI-processable, enabling the assistant to draw on accumulated insights, patterns, and domain knowledge when guiding design decisions.
 
 ### 3. Prototyping
 
-TODO: Link [pattern playground](https://github.com/igorrazvodovsky/pattern-playground)
+- Concepts-based foundation
+- A way for a designer to use their preferred AI toolkits that help with coding.
+- TODO: Link [pattern playground](https://github.com/igorrazvodovsky/pattern-playground)
+- TODO: LLM API/SDK
 
 ## Capabilities
 
